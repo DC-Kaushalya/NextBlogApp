@@ -1,9 +1,11 @@
 import React from "react";
 
 const Footer = () => {
+	console.log("Hello");
 	return (
 		<div>
-			<h1>Footer</h1>
+			<div>2023 DC-Kaushalya. All rights reserved</div>
+			<div></div>
 		</div>
 	);
 };

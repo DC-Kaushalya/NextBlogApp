@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import Link from "next/link";
 
@@ -38,6 +39,20 @@ const Navbar = () => {
 	return (
 		<div>
 			<Link href="/">DC-Kaushalya</Link>
+			<div>
+				{links.map((link) => (
+					<Link key={link.id} href={link.url}>
+						{link.title}
+					</Link>
+				))}
+				<button
+					onClick={() => {
+						console.log("logged out");
+					}}
+				>
+					Logout
+				</button>
+			</div>
 		</div>
 	);
 };
