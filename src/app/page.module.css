@@ -8,18 +8,18 @@
 	flex: 1;
 	display: flex;
 	flex-direction: column;
-	gap: 50px;
+	gap: 45px;
 }
 
 .title {
-	font-size: 45px;
+	font-size: 55px;
 	background: linear-gradient(to bottom, #0d6147, #b6f3dcac);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
 
 .img {
-	width: 66%;
+	width: 100%;
 	height: 500px;
 	object-fit: cover;
 }
