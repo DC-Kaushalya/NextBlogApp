@@ -28,13 +28,3 @@
 	font-size: 14px;
 	font-weight: 300;
 }
-
-.button {
-	padding: 15px;
-	cursor: pointer;
-	background-color: #125a44;
-	border: none;
-	border-radius: 5px;
-	width: max-content;
-	color: white;
-}
