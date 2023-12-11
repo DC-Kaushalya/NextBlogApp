@@ -3,7 +3,7 @@
 
 .title {
 	font-size: 60px;
-	margin-bottom: 100px;
+	margin-bottom: 30px;
 	text-align: center;
 }
 
@@ -21,7 +21,7 @@
 
 .image {
 	object-fit: contain;
-	animation: move 3s infinite ease alternate;
+	/* animation: move 3s infinite ease alternate; */
 }
 
 @keyframes move {
@@ -42,12 +42,12 @@
 
 .input,
 .textarea {
-	padding: 20px;
+	padding: 15px;
 	background-color: transparent;
 	border: none;
 	outline: none;
 	color: #bbb;
 	border: 3px solid #bbb;
-	font-size: 20px;
+	font-size: 15px;
 	font-weight: bold;
 }
