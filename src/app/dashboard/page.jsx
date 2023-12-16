@@ -39,7 +39,7 @@ const Dashboard = () => {
 
 	const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
-	const { data, error, isLoading } = useSWR(
+	const { data, mutate, error, isLoading } = useSWR(
 		`/api/posts?username=${session?.data?.user.name}`,
 		fetcher
 	);
@@ -73,6 +73,19 @@ const Dashboard = () => {
 					username: session.data.user.name,
 				}),
 			});
+			mutate();
+		} catch (err) {
+			console.log(err);
+		}
+	};
+
+	const handleDelete = async (id) => {
+		try {
+			await fetch(`/api/posts/${id}`, {
+				method: "DELETE",
+			});
+			mutate();
+			e.target.reset();
 		} catch (err) {
 			console.log(err);
 		}
@@ -81,7 +94,7 @@ const Dashboard = () => {
 	if (session.status === "authenticated") {
 		return (
 			<div className={styles.container}>
-				<div className={styles.post}>
+				<div className={styles.posts}>
 					{isLoading
 						? "loading"
 						: data?.map((post) => (
@@ -97,7 +110,12 @@ const Dashboard = () => {
 									<h2 className={styles.postTittle}>
 										{post.title}
 									</h2>
-									<span className={styles.delete}>X</span>
+									<span
+										className={styles.delete}
+										onClick={() => handleDelete(post._id)}
+									>
+										X
+									</span>
 								</div>
 						  ))}
 				</div>
