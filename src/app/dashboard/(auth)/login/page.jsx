@@ -1,8 +1,9 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import styles from "./page.module.css";
+
 import { getProviders, signIn, useSession } from "next-auth/react";
 import { useRouter, useSearchParams } from "next/navigation";
+import styles from "./page.module.css";
 import Link from "next/link";
 
 const Login = ({ url }) => {

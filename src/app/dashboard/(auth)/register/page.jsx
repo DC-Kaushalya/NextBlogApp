@@ -1,8 +1,9 @@
 "use client";
 import React, { useState } from "react";
+
+import { useRouter } from "next/navigation";
 import styles from "./page.module.css";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
 
 const Register = () => {
 	const [error, setError] = useState(null);
