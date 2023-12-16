@@ -44,8 +44,6 @@ const Dashboard = () => {
 		fetcher
 	);
 
-	console.log(data);
-
 	if (session.status === "loading") {
 		return <p>Loading...</p>;
 	}
@@ -65,7 +63,6 @@ const Dashboard = () => {
 			await fetch("/api/posts", {
 				method: "POST",
 				body: JSON.stringify({
-					username: session.data.user.name,
 					title,
 					desc,
 					img,
@@ -74,6 +71,7 @@ const Dashboard = () => {
 				}),
 			});
 			mutate();
+			e.target.reset();
 		} catch (err) {
 			console.log(err);
 		}
@@ -85,7 +83,6 @@ const Dashboard = () => {
 				method: "DELETE",
 			});
 			mutate();
-			e.target.reset();
 		} catch (err) {
 			console.log(err);
 		}
