@@ -1,5 +1,11 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+## Introduction
+
+Introducing NextBlogApp – a cutting-edge platform designed for displaying posts and portfolios, showcasing the author's creative works in intricate detail. 
+
+This application serves as a hands-on learning experience for mastering Next.js 13, complete with App Router, Auth.js integration, MongoDB backend, and the implementation of Server-Side Rendering (SSR) and Client-Side Rendering (CSR) components.
+
 ## Getting Started
 
 First, run the development server:
